@@ -41,6 +41,24 @@ export default function App() {
   //   return null;
   // }
 
+  const [isFontLoaded, setFontLoaded] = react.useState(false);
+  const _loadResourcesAsync = async () => {
+    return Promise.all([
+      Font.loadAsync({
+        'barbie': require("./assets/fonts/Barbie-font.ttf"),
+      }),
+    ]);
+  };
+  react.useEffect(() => {
+    _loadResourcesAsync().then(() => {
+      setFontLoaded(true);
+    });
+  }, []);
+
+  if (!isFontLoaded) {
+    return <View />;
+  }
+
   const [refresh, setRefresh] = react.useState(false);
   const [noti, setNoti] = react.useState("Player X to start !");
   const [ele, setEle] = react.useState([
