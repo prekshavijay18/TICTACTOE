@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Barbie-font.ttf",
+      "sha1": "939ab2e67d137defb033a053a96c2d49d0d64138"
+    },
+    {
+      "path": "assets/fonts/Bartex.ttf",
+      "sha1": "1e808211eacba4e9544fe069f94c93cea94f4e3d"
+    }
+  ]
+}
